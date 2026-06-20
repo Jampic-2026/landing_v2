@@ -16,29 +16,33 @@ export const landingContent = {
     hero: {
       badge: 'Salud digital conectada',
       title: 'Atención médica conectada, rápida y segura',
-      subtitle: 'Hampiq conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
+      subtitle:
+        'Hampiq conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
       primaryCta: 'Solicitar demo',
       secondaryCta: 'Ver cómo funciona',
-      mockup: {
-        status: 'Activo',
-        eyebrow: 'Hampiq Monitor',
-        title: 'Panel en tiempo real',
-        emergencyLabel: 'Emergencias',
-        emergencyValue: '2 alertas en curso',
-        consultationLabel: 'Teleconsulta',
-        consultationValue: 'Especialista conectado',
-        historyLabel: 'Historial',
-        historyValue: 'Última nota añadida',
-        teamLabel: 'Equipo médico',
-        teamValue: '5 profesionales activos',
-        operationsLabel: 'Operaciones',
-        operationsValue: '3 sedes sincronizadas',
-      },
-      stats: [
-        { title: 'Alerta de emergencia', description: 'Botón SOS para respuesta prioritaria.' },
-        { title: 'Telemedicina', description: 'Consultas digitales con especialistas.' },
-        { title: 'Familiares', description: 'Acompañamiento autorizado y notificaciones.' },
-        { title: 'Historial clínico', description: 'Toda la información en un solo lugar.' },
+      dashboardAlt: 'Panel médico en tiempo real de Hampiq',
+      mobileAlt: 'Aplicación móvil de Hampiq',
+      features: [
+        {
+          icon: '🛡️',
+          title: 'Respuestas inmediatas',
+          description: 'Cuando más importa',
+        },
+        {
+          icon: '🔒',
+          title: 'Información segura',
+          description: 'Privacidad garantizada',
+        },
+        {
+          icon: '👥',
+          title: 'Todos conectados',
+          description: 'Un ecosistema único',
+        },
+        {
+          icon: '📊',
+          title: 'Datos en tiempo real',
+          description: 'Decisiones más rápidas',
+        },
       ],
     },
     missionVision: {
@@ -286,26 +290,30 @@ export const landingContent = {
       subtitle: 'Hampiq connects patients, families, healthcare professionals and institutions in an intelligent medical ecosystem.',
       primaryCta: 'Request demo',
       secondaryCta: 'See how it works',
-      mockup: {
-        status: 'Active',
-        eyebrow: 'Hampiq Monitor',
-        title: 'Real-time panel',
-        emergencyLabel: 'Emergencies',
-        emergencyValue: '2 active alerts',
-        consultationLabel: 'Teleconsultation',
-        consultationValue: 'Specialist connected',
-        historyLabel: 'History',
-        historyValue: 'Latest note added',
-        teamLabel: 'Medical team',
-        teamValue: '5 active professionals',
-        operationsLabel: 'Operations',
-        operationsValue: '3 sites synchronized',
-      },
-      stats: [
-        { title: 'Emergency alert', description: 'SOS button for prioritized response.' },
-        { title: 'Telemedicine', description: 'Digital consultations with specialists.' },
-        { title: 'Family members', description: 'Authorized support and notifications.' },
-        { title: 'Clinical history', description: 'All care information in one place.' },
+      dashboardAlt: 'Hampiq real-time medical dashboard',
+      mobileAlt: 'Hampiq mobile application',
+
+      features: [
+        {
+          icon: '🛡️',
+          title: 'Instant response',
+          description: 'When it matters most',
+        },
+        {
+          icon: '🔒',
+          title: 'Secure information',
+          description: 'Privacy guaranteed',
+        },
+        {
+          icon: '👥',
+          title: 'Everyone connected',
+          description: 'A unified ecosystem',
+        },
+        {
+          icon: '📊',
+          title: 'Real-time data',
+          description: 'Faster decisions',
+        },
       ],
     },
     missionVision: {

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ThemeToggle from '../components/ThemeToggle';
 import { landingContent, type Language, type Theme } from '../config/content';
+import { primaryButton } from './ui';
 
 type NavbarProps = {
   language: Language;
@@ -14,31 +15,49 @@ export default function Navbar({ language, setLanguage, theme, setTheme }: Navba
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="container navbar-inner">
-        <div className="navbar-brand">
-          <span className="brand-mark">H</span>
-          <span className="brand-copy">
-            <strong>Hampiq</strong>
-            <small>{language === 'es' ? 'Ecosistema HealthTech' : 'HealthTech ecosystem'}</small>
+    <nav className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 shadow-lg shadow-slate-900/5 backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/80 dark:shadow-black/20">
+      <div className="mx-auto flex min-h-[74px] w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="inline-flex items-center gap-3">
+          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-teal-500 to-sky-500 text-base font-black text-white shadow-lg shadow-teal-500/20">
+            H
+          </span>
+          <span className="grid">
+            <strong className="text-lg font-black text-slate-950 dark:text-white">Hampiq</strong>
+            <small className="text-xs font-bold text-slate-500 dark:text-slate-400">
+              {language === 'es' ? 'Ecosistema HealthTech' : 'HealthTech ecosystem'}
+            </small>
           </span>
         </div>
 
-        <div className="nav-links" aria-expanded={menuOpen}>
+        <div
+          className={`absolute left-4 right-4 top-[calc(100%+0.75rem)] grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 dark:border-white/10 dark:bg-slate-950 lg:static lg:flex lg:items-center lg:gap-6 lg:border-0 lg:bg-transparent lg:shadow-none lg:dark:bg-transparent ${
+            menuOpen ? 'grid' : 'hidden lg:flex'
+          }`}
+          aria-expanded={menuOpen}
+        >
           {content.links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              className="border-b border-slate-100 px-4 py-3 text-sm font-bold text-slate-600 transition-colors hover:text-teal-600 dark:border-white/10 dark:text-slate-300 dark:hover:text-teal-300 lg:border-0 lg:p-0"
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="nav-actions">
-          <div className="language-toggle">
+        <div className="flex items-center gap-3">
+          <div className="inline-flex rounded-full border border-slate-200 bg-slate-100 p-1 dark:border-white/10 dark:bg-white/10">
             {(['es', 'en'] as Language[]).map((lang) => (
               <button
                 key={lang}
                 type="button"
-                className={language === lang ? 'active' : ''}
+                className={`rounded-full px-3 py-1.5 text-xs font-black transition-colors ${
+                  language === lang
+                    ? 'bg-white text-slate-950 shadow-sm dark:bg-white/15 dark:text-white'
+                    : 'text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white'
+                }`}
                 onClick={() => setLanguage(lang)}
               >
                 {lang.toUpperCase()}
@@ -46,18 +65,20 @@ export default function Navbar({ language, setLanguage, theme, setTheme }: Navba
             ))}
           </div>
           <ThemeToggle theme={theme} setTheme={setTheme} />
-          <a className="btn btn-primary nav-cta" href="#contacto">
+          <a className={`${primaryButton} hidden xl:inline-flex`} href="#contacto">
             {content.cta}
           </a>
           <button
             type="button"
-            className="menu-button"
+            className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-950 dark:border-white/10 dark:bg-white/10 dark:text-white lg:hidden"
             aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span />
-            <span />
+            <span className="grid gap-1">
+              <span className="block h-0.5 w-5 rounded-full bg-current" />
+              <span className="block h-0.5 w-5 rounded-full bg-current" />
+            </span>
           </button>
         </div>
       </div>

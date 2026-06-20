@@ -11,11 +11,11 @@ export default function ThemeToggle({ theme, setTheme }: ThemeToggleProps) {
   return (
     <button
       type="button"
-      className="theme-toggle"
+      className="relative h-8 w-14 rounded-full border border-slate-200 bg-slate-100 p-1 shadow-inner transition-colors dark:border-white/15 dark:bg-white/10"
       aria-label={theme === 'light' ? 'Activar modo oscuro' : 'Activar modo claro'}
       onClick={() => setTheme(nextTheme)}
     >
-      <span />
+      <span className="block h-6 w-6 rounded-full bg-gradient-to-br from-teal-500 to-sky-500 shadow-lg shadow-teal-500/20 transition-transform duration-300 dark:translate-x-6" />
     </button>
   );
 }

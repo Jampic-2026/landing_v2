@@ -22,14 +22,15 @@ import type { Language, Theme } from '../config/content';
 
 export default function LandingPage() {
   const [language, setLanguage] = useState<Language>('es');
-  const [theme, setThemeState] = useState<Theme>('light');
+  const [theme, setThemeState] = useState<Theme>(() => {
+    const savedTheme = window.localStorage.getItem('hampiq-theme');
+    return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'light';
+  });
 
   useEffect(() => {
-    const savedTheme = window.localStorage.getItem('hampiq-theme');
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      setThemeState(savedTheme);
-    }
-  }, []);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
 
   const setTheme = (nextTheme: Theme) => {
     setThemeState(nextTheme);
@@ -37,7 +38,7 @@ export default function LandingPage() {
   };
 
   return (
-    <div data-theme={theme}>
+    <div data-theme={theme} className={theme === 'dark' ? 'dark' : undefined}>
       <Navbar language={language} setLanguage={setLanguage} theme={theme} setTheme={setTheme} />
       <main>
         <HeroSection language={language} />

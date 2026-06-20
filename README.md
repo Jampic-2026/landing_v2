@@ -8,9 +8,9 @@ Landing page modular para Hampiq, construida con React, Vite y TypeScript.
   - `landing/` - componentes de la landing.
   - `components/` - componentes reutilizables.
   - `config/` - contenido bilingüe y tipos.
-  - `styles.css` - estilos globales y diseño del landing.
   - `App.tsx` - entrada de la aplicación.
   - `main.tsx` - bootstrap de React.
+- `globals.css` - base global de Tailwind y estilos mínimos no específicos de secciones.
 - `index.html` - punto de entrada para Vite.
 - `package.json` - dependencias y scripts.
 - `tsconfig.json` - configuración de TypeScript.
