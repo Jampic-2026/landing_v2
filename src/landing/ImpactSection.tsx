@@ -19,7 +19,7 @@ export default function ImpactSection({ language }: { language: Language }) {
               <span className="absolute h-52 w-52 animate-pulse rounded-full border border-teal-300/25" />
               <span className="absolute h-72 w-72 rounded-full border border-sky-300/15" />
               <span className="absolute h-[21rem] w-[21rem] rounded-full border border-emerald-300/10" />
-              <strong className="grid h-32 w-32 place-items-center rounded-full bg-gradient-to-br from-teal-500 to-sky-500 text-xl font-black shadow-2xl shadow-teal-500/20">Hampiq</strong>
+              <strong className="grid h-32 w-32 place-items-center rounded-full bg-gradient-to-br from-teal-500 to-sky-500 text-xl font-black shadow-2xl shadow-teal-500/20">Jampic</strong>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {content.metrics.map((metric, index) => (

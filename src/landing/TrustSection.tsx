@@ -24,7 +24,7 @@ export default function TrustSection({ language }: { language: Language }) {
                   </span>
                 ))}
               </div>
-              <strong className="absolute bottom-8 rounded-full bg-teal-400/15 px-5 py-2 text-sm font-black text-teal-200">Hampiq</strong>
+              <strong className="absolute bottom-8 rounded-full bg-teal-400/15 px-5 py-2 text-sm font-black text-teal-200">Jampic</strong>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {content.cards.map((item, index) => (

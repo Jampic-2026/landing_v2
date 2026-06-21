@@ -17,7 +17,7 @@ export default function Footer({ language }: FooterProps) {
       >
         <div className="grid gap-1">
           <strong className="text-lg font-black text-slate-950 dark:text-white">
-            Hampiq
+            Jampic
           </strong>
 
           <small className="text-sm text-slate-500 dark:text-slate-400">

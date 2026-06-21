@@ -1,6 +1,6 @@
-# Hampiq Landing Page
+# Jampic Landing Page
 
-Landing page modular para Hampiq, construida con React, Vite y TypeScript.
+Landing page modular para Jampic, construida con React, Vite y TypeScript.
 
 ## Estructura
 

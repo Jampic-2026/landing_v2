@@ -20,7 +20,7 @@ export default function SolutionSection({ language }: { language: Language }) {
               <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full border border-dashed border-teal-400/30" />
               <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-sky-400/20" />
               <div className="absolute left-1/2 top-1/2 grid h-40 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-gradient-to-br from-slate-900 to-teal-700 p-5 text-center text-white shadow-2xl shadow-teal-500/20">
-                <span className="text-xs font-bold opacity-80">Hampiq</span>
+                <span className="text-xs font-bold opacity-80">Jampic</span>
                 <strong className="text-lg font-black leading-tight">{content.ecosystem}</strong>
               </div>
               {content.cards.slice(0, 6).map((item, index) => (

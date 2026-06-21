@@ -22,7 +22,7 @@ export default function Navbar({ language, setLanguage, theme, setTheme }: Navba
             H
           </span>
           <span className="grid">
-            <strong className="text-lg font-black text-slate-950 dark:text-white">Hampiq</strong>
+            <strong className="text-lg font-black text-slate-950 dark:text-white">Jampic</strong>
             <small className="text-xs font-bold text-slate-500 dark:text-slate-400">
               {language === 'es' ? 'Ecosistema HealthTech' : 'HealthTech ecosystem'}
             </small>

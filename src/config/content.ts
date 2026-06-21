@@ -15,11 +15,11 @@ export const landingContent = {
     },
     hero: {
       title: 'Atención médica conectada, rápida y segura',
-      subtitle: 'Hampiq conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
+      subtitle: 'Jampic conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
       primaryCta: 'Solicitar demo',
       secondaryCta: 'Ver cómo funciona',
-      dashboardAlt: 'Panel médico en tiempo real de Hampiq',
-      mobileAlt: 'Aplicación móvil de Hampiq',
+      dashboardAlt: 'Panel médico en tiempo real de Jampic',
+      mobileAlt: 'Aplicación móvil de Jampic',
       features: [
         {
           title: 'Respuestas inmediatas',
@@ -41,14 +41,16 @@ export const landingContent = {
     },
     missionVision: {
       missionTitle: 'Misión',
+      subtitleMission: 'Nuestra esencia',
       mission: 'Transformar el acceso a la salud mediante tecnología, coordinación y atención oportuna, conectando personas y profesionales en un ecosistema médico inteligente.',
       visionTitle: 'Visión',
+      subtitleVision: 'Hacia dónde vamos',
       vision: 'Convertirnos en la plataforma líder de salud digital en Latinoamérica, impulsando una atención más accesible, humana y conectada.',
       tagline: 'Salud más cercana, humana y conectada.',
     },
     emergencySystem: {
       title: 'Respuesta rápida cuando más importa',
-      subtitle: 'Hampiq clasifica la prioridad de atención mediante un sistema de semáforo para coordinar respuestas oportunas.',
+      subtitle: 'Jampic clasifica la prioridad de atención mediante un sistema de semáforo para coordinar respuestas oportunas.',
       sideTitle: 'Coordinación inteligente',
       sideNote: 'Cada alerta puede ser enviada al equipo correspondiente según prioridad, ubicación y disponibilidad.',
       levels: [
@@ -71,7 +73,7 @@ export const landingContent = {
     },
     familyCare: {
       title: 'Porque la salud también se cuida en familia',
-      subtitle: 'Hampiq permite que familiares autorizados acompañen el estado de salud del paciente, reciban actualizaciones y participen en momentos importantes.',
+      subtitle: 'Jampic permite que familiares autorizados acompañen el estado de salud del paciente, reciban actualizaciones y participen en momentos importantes.',
       items: [
         'Vinculación de familiar o cuidador',
         'Notificaciones ante emergencias',
@@ -90,7 +92,7 @@ export const landingContent = {
       },
     },
     pillars: {
-      title: 'Los pilares de Hampiq',
+      title: 'Los pilares de Jampic',
       subtitle: 'Una plataforma pensada para responder, conectar y acompañar.',
       items: [
         { title: 'Atención rápida', description: 'Conectar pacientes con ayuda cuando la necesitan.' },
@@ -126,10 +128,10 @@ export const landingContent = {
       ecosystem: 'Ecosistema',
     },
     howItWorks: {
-      title: 'Cómo funciona Hampiq',
+      title: 'Cómo funciona Jampic',
       steps: [
         { title: 'Solicitud de ayuda', description: 'El paciente inicia una consulta o activa una alerta desde la app.' },
-        { title: 'Clasificación por prioridad', description: 'Hampiq ordena la necesidad según urgencia, contexto y disponibilidad.' },
+        { title: 'Clasificación por prioridad', description: 'Jampic ordena la necesidad según urgencia, contexto y disponibilidad.' },
         { title: 'Conexión con el equipo adecuado', description: 'La plataforma coordina profesionales, familiares o servicios vinculados.' },
         { title: 'Atención y seguimiento', description: 'Cada interacción queda registrada para continuidad y trazabilidad.' },
       ],
@@ -256,7 +258,7 @@ export const landingContent = {
       ],
     },
     differentiators: {
-      title: 'Hampiq no es solo otra app médica',
+      title: 'Jampic no es solo otra app médica',
       items: [
         'No es solo telemedicina.',
         'No depende exclusivamente de inteligencia artificial.',
@@ -278,7 +280,7 @@ export const landingContent = {
       pillars: ['Acceso', 'Permisos', 'Historial'],
     },
     technology: {
-      title: 'Tecnología que impulsa Hampiq',
+      title: 'Tecnología que impulsa Jampic',
       subtitle: 'Integramos herramientas modernas para construir una plataforma segura, escalable e inteligente.',
       items: [
         { logo: 'G', name: 'Google Cloud', description: 'Infraestructura escalable.' },
@@ -291,12 +293,12 @@ export const landingContent = {
     },
     partners: {
       title: 'Potenciado por líderes tecnológicos',
-      subtitle: 'Hampiq integra tecnologías modernas para ofrecer una experiencia segura, escalable y confiable.',
+      subtitle: 'Jampic integra tecnologías modernas para ofrecer una experiencia segura, escalable y confiable.',
       items: ['Google', 'OpenAI', 'Firebase', 'Docker'],
     },
     team: {
-      title: 'Las personas detrás de Hampiq',
-      subtitle: 'Hampiq es construido por un equipo multidisciplinario comprometido con transformar la salud mediante tecnología.',
+      title: 'Las personas detrás de Jampic',
+      subtitle: 'Jampic es construido por un equipo multidisciplinario comprometido con transformar la salud mediante tecnología.',
       members: [
         {
           name: 'Brayan Mejía',
@@ -349,13 +351,13 @@ export const landingContent = {
     },
     finalCta: {
       title: 'Construyamos una atención médica más conectada',
-      subtitle: 'Hampiq nace para acercar atención, tecnología y personas en los momentos donde la salud no puede esperar.',
+      subtitle: 'Jampic nace para acercar atención, tecnología y personas en los momentos donde la salud no puede esperar.',
       primaryCta: 'Solicitar demo',
       secondaryCta: 'Contactar al equipo',
       care: 'Cuidado conectado',
     },
     footer: {
-      copyright: '© 2026 Hampiq. Todos los derechos reservados.',
+      copyright: '© 2026 Jampic. Todos los derechos reservados.',
     },
   },
   en: {
@@ -371,11 +373,11 @@ export const landingContent = {
     },
     hero: {
       title: 'Connected, fast and secure healthcare',
-      subtitle: 'Hampiq connects patients, families, healthcare professionals and institutions in an intelligent medical ecosystem.',
+      subtitle: 'Jampic connects patients, families, healthcare professionals and institutions in an intelligent medical ecosystem.',
       primaryCta: 'Request demo',
       secondaryCta: 'See how it works',
-      dashboardAlt: 'Hampiq real-time medical dashboard',
-      mobileAlt: 'Hampiq mobile application',
+      dashboardAlt: 'Jampic real-time medical dashboard',
+      mobileAlt: 'Jampic mobile application',
       features: [
         {
           title: 'Instant response',
@@ -397,14 +399,16 @@ export const landingContent = {
     },
     missionVision: {
       missionTitle: 'Mission',
+      subtitleMission: 'Our essence',
       mission: 'Transform access to healthcare through technology, coordination and timely care, connecting people and professionals in an intelligent medical ecosystem.',
       visionTitle: 'Vision',
+      subtitleVision: 'Where we are headed',
       vision: 'Become the leading digital health platform in Latin America, powering more accessible, human and connected care.',
       tagline: 'Closer, more human and connected healthcare.',
     },
     emergencySystem: {
       title: 'Fast response when it matters most',
-      subtitle: 'Hampiq classifies care priority through a semaphore system to coordinate timely responses.',
+      subtitle: 'Jampic classifies care priority through a semaphore system to coordinate timely responses.',
       sideTitle: 'Smart coordination',
       sideNote: 'Each alert can be sent to the right team based on priority, location and availability.',
       levels: [
@@ -427,7 +431,7 @@ export const landingContent = {
     },
     familyCare: {
       title: 'Because health is also cared for as a family',
-      subtitle: 'Hampiq allows authorized family members to follow the patient health status, receive updates and participate in important moments.',
+      subtitle: 'Jampic allows authorized family members to follow the patient health status, receive updates and participate in important moments.',
       items: [
         'Family member or caregiver linking',
         'Emergency notifications',
@@ -446,7 +450,7 @@ export const landingContent = {
       },
     },
     pillars: {
-      title: 'Hampiq pillars',
+      title: 'Jampic pillars',
       subtitle: 'A platform designed to respond, connect and support.',
       items: [
         { title: 'Fast care', description: 'Connect patients with help when they need it.' },
@@ -482,10 +486,10 @@ export const landingContent = {
       ecosystem: 'Ecosystem',
     },
     howItWorks: {
-      title: 'How Hampiq works',
+      title: 'How Jampic works',
       steps: [
         { title: 'Help request', description: 'The patient starts a consultation or activates an alert from the app.' },
-        { title: 'Priority classification', description: 'Hampiq orders the need by urgency, context and availability.' },
+        { title: 'Priority classification', description: 'Jampic orders the need by urgency, context and availability.' },
         { title: 'Connection with the right team', description: 'The platform coordinates professionals, family members or linked services.' },
         { title: 'Care and follow-up', description: 'Each interaction is recorded for continuity and traceability.' },
       ],
@@ -608,7 +612,7 @@ export const landingContent = {
       ],
     },
     differentiators: {
-      title: 'Hampiq is not just another healthcare app',
+      title: 'Jampic is not just another healthcare app',
       items: [
         'It is not just telemedicine.',
         'It does not rely exclusively on artificial intelligence.',
@@ -630,7 +634,7 @@ export const landingContent = {
       pillars: ['Access', 'Permissions', 'History'],
     },
     technology: {
-      title: 'Technology powering Hampiq',
+      title: 'Technology powering Jampic',
       subtitle: 'We integrate modern tools to build a secure, scalable and intelligent platform.',
       items: [
         { logo: 'G', name: 'Google Cloud', description: 'Scalable infrastructure.' },
@@ -643,12 +647,12 @@ export const landingContent = {
     },
     partners: {
       title: 'Powered by technology leaders',
-      subtitle: 'Hampiq integrates modern technologies to deliver a secure, scalable and reliable experience.',
+      subtitle: 'Jampic integrates modern technologies to deliver a secure, scalable and reliable experience.',
       items: ['Google', 'OpenAI', 'Firebase', 'Docker'],
     },
     team: {
-      title: 'The people behind Hampiq',
-      subtitle: 'Hampiq is built by a multidisciplinary team committed to transforming healthcare through technology.',
+      title: 'The people behind Jampic',
+      subtitle: 'Jampic is built by a multidisciplinary team committed to transforming healthcare through technology.',
       members: [
         {
           name: 'Brayan Mejía',
@@ -701,13 +705,13 @@ export const landingContent = {
     },
     finalCta: {
       title: 'Let’s build more connected healthcare',
-      subtitle: 'Hampiq was born to bring care, technology and people closer in the moments when health cannot wait.',
+      subtitle: 'Jampic was born to bring care, technology and people closer in the moments when health cannot wait.',
       primaryCta: 'Request demo',
       secondaryCta: 'Contact the team',
       care: 'Care connected',
     },
     footer: {
-      copyright: '© 2026 Hampiq. All rights reserved',
+      copyright: '© 2026 Jampic. All rights reserved',
     },
   },
 };

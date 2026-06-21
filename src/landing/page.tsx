@@ -47,14 +47,14 @@ export default function LandingPage() {
         <FamilyCareSection language={language} />
         <ProblemSection language={language} />
         <SolutionSection language={language} />
-        <PillarsSection language={language} />
+        {/* <PillarsSection language={language} /> */}
         <HowItWorksSection language={language} />
         <ModulesSection language={language} />
         <BenefitsSection language={language} />
-        <DifferentiatorsSection language={language} />
+        {/* <DifferentiatorsSection language={language} /> */}
         <TrustSection language={language} />
         <TechnologySection language={language} />
-        <PartnersSection language={language} />
+        {/* <PartnersSection language={language} /> */}
         <ImpactSection language={language} />
         <TeamSection language={language} />
         <FinalCTASection language={language} />
