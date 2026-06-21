@@ -26,8 +26,10 @@ export default function FinalCTASection({ language }: { language: Language }) {
             <div className="grid min-h-56 place-items-center rounded-3xl border border-white/10 bg-white/10 p-6" aria-hidden="true">
               <div className="text-center">
                 <span className="text-sm font-black text-teal-200">24/7</span>
-                <strong className="my-4 grid h-24 w-24 place-items-center rounded-full bg-red-500 text-xl font-black text-white shadow-[0_0_42px_rgba(239,68,68,0.55)]">SOS</strong>
-                <p className="text-sm font-bold text-slate-300">Care connected</p>
+                <strong className="mx-auto my-4 grid h-24 w-24 place-items-center rounded-full bg-red-500 text-xl font-black text-white shadow-[0_0_42px_rgba(239,68,68,0.55)]">
+                  SOS
+                </strong>
+                <p className="text-sm font-bold text-slate-300">{content.care}</p>
               </div>
             </div>
           </div>

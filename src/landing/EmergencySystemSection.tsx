@@ -53,7 +53,7 @@ export default function EmergencySystemSection({ language }: { language: Languag
               ))}
               <aside className="rounded-2xl border border-teal-400/20 bg-teal-400/10 p-5">
                 <span className="text-xs font-black uppercase text-teal-700 dark:text-teal-300">
-                  {language === 'es' ? 'Coordinación inteligente' : 'Smart coordination'}
+                  {content.sideTitle}
                 </span>
                 <strong className="mt-2 block text-lg font-black leading-snug text-slate-950 dark:text-white">
                   {content.sideNote}

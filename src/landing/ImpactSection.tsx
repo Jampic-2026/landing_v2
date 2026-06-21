@@ -35,7 +35,7 @@ export default function ImpactSection({ language }: { language: Language }) {
             </div>
           </div>
           <p className="mt-8 rounded-2xl border border-teal-300/20 bg-teal-300/10 p-5 text-sm leading-7 text-slate-200">
-            <span className="mr-3 font-black text-teal-200">{language === 'es' ? 'Proyección' : 'Projection'}</span>
+            <span className="mr-3 font-black text-teal-200">{content.projection}</span>
             {content.note}
           </p>
         </AnimatedWrapper>

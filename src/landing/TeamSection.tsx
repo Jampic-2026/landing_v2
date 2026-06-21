@@ -9,21 +9,43 @@ export default function TeamSection({ language }: { language: Language }) {
 
   return (
     <section className={sectionShell}>
+      
       <div className={containerShell}>
         <AnimatedWrapper>
-          <SectionHeader title={content.title} subtitle={content.subtitle} />
+          <SectionHeader
+            title={content.title}
+            subtitle={content.subtitle}
+          />
         </AnimatedWrapper>
+
         <AnimatedWrapper delay={0.08}>
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
-            {content.members.map((member, index) => (
-              <article key={member.role} className="grid gap-5 rounded-3xl border border-slate-200 bg-white/85 p-5 shadow-lg shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.06] sm:grid-cols-[112px_1fr]">
-                <div className="grid h-32 place-items-end rounded-2xl bg-gradient-to-br from-teal-500/25 to-sky-500/25 p-4 sm:h-full">
-                  <span className="text-2xl font-black text-teal-700 dark:text-teal-200">{String(index + 1).padStart(2, '0')}</span>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {content.members.map((member) => (
+              <article
+                key={member.role}
+                className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-900/5 transition-all hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-white/[0.06]"
+              >
+                <div className="mx-auto mb-5 aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800">
+                  <img
+                    src={member.image} 
+                    alt={member.name}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-xl font-black text-slate-950 dark:text-white">{member.name}</h3>
-                  <strong className="mt-2 block text-sm font-black text-teal-700 dark:text-teal-300">{member.role}</strong>
-                  <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">{member.description}</p>
+
+                <div className="text-center">
+                  <h3 className="text-2xl font-black text-slate-950 dark:text-white">
+                    {member.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm font-bold text-teal-700 dark:text-teal-300">
+                    {member.role}
+                  </p>
+
+                  <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {member.description}
+                  </p>
                 </div>
               </article>
             ))}

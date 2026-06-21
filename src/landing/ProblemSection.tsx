@@ -19,9 +19,9 @@ export default function ProblemSection({ language }: { language: Language }) {
             <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-px w-[78%] -translate-x-1/2 bg-gradient-to-r from-transparent via-red-400/40 to-transparent sm:block" />
             <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[78%] w-px -translate-y-1/2 bg-gradient-to-b from-transparent via-red-400/40 to-transparent sm:block" />
             <div className="z-10 grid place-items-center rounded-2xl border border-red-400/20 bg-red-500/10 p-5 text-center sm:absolute sm:left-1/2 sm:top-1/2 sm:h-44 sm:w-44 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-full">
-              <span className="text-xs font-black uppercase text-red-500">{language === 'es' ? 'Paciente' : 'Patient'}</span>
+              <span className="text-xs font-black uppercase text-red-500">{content.patient}</span>
               <strong className="mt-2 text-lg font-black leading-tight text-slate-950 dark:text-white">
-                {language === 'es' ? 'Necesita atención' : 'Needs care'}
+                {content.needCare}
               </strong>
             </div>
             {content.items.map((item, index) => (

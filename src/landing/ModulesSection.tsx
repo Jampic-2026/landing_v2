@@ -3,9 +3,14 @@ import SectionHeader from '../components/SectionHeader';
 import { landingContent } from '../config/content';
 import type { Language } from '../config/content';
 import { containerShell, sectionShell } from './ui';
+import { Bell, Building2, CalendarDays, ClipboardList, FileText,
+  MapPin, Mic, ShieldCheck, Smartphone, Stethoscope, Users, Video,
+} from 'lucide-react';
 
 export default function ModulesSection({ language }: { language: Language }) {
   const content = landingContent[language].modules;
+  const labels = content.labels;
+
   const emergency = content.cards[0];
   const telemedicine = content.cards[1];
   const history = content.cards[2];
@@ -14,106 +19,355 @@ export default function ModulesSection({ language }: { language: Language }) {
   const patientApp = content.cards[5];
   const family = content.cards[6];
 
+  const emergencyFeatures = [
+    {
+      icon: MapPin,
+      tone: 'red',
+      title: labels.emergencyFeatures[0].title,
+      description: labels.emergencyFeatures[0].description,
+    },
+    {
+      icon: Bell,
+      tone: 'amber',
+      title: labels.emergencyFeatures[1].title,
+      description: labels.emergencyFeatures[1].description,
+    },
+    {
+      icon: ShieldCheck,
+      tone: 'emerald',
+      title: labels.emergencyFeatures[2].title,
+      description: labels.emergencyFeatures[2].description,
+    },
+  ];
+
+  const telemedicineFeatures = [
+    {
+      icon: Video,
+      title: labels.telemedicineFeatures[0].title,
+      description: labels.telemedicineFeatures[0].description,
+    },
+    {
+      icon: FileText,
+      title: labels.telemedicineFeatures[1].title,
+      description: labels.telemedicineFeatures[1].description,
+    },
+    {
+      icon: CalendarDays,
+      title: labels.telemedicineFeatures[2].title,
+      description: labels.telemedicineFeatures[2].description,
+    },
+  ];
+
+  const iconTone = {
+    red: 'bg-red-50 text-red-500 dark:bg-red-500/10 dark:text-red-300',
+    amber: 'bg-amber-50 text-amber-500 dark:bg-amber-500/10 dark:text-amber-300',
+    emerald: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300',
+  };
+
   return (
     <section className={sectionShell}>
       <div className={containerShell}>
         <AnimatedWrapper>
           <SectionHeader title={content.title} align="center" />
         </AnimatedWrapper>
+
         <AnimatedWrapper delay={0.08}>
-          <div className="mt-12 grid gap-5 lg:grid-cols-6" aria-label={content.title}>
-            <article className="grid gap-6 rounded-3xl border border-red-400/20 bg-gradient-to-br from-red-500/12 via-white to-sky-500/10 p-6 shadow-xl shadow-slate-900/5 dark:via-white/[0.06] lg:col-span-3 lg:grid-cols-[1fr_220px]">
+          <div className="mt-10 grid gap-5 lg:grid-cols-6" aria-label={content.title}>
+            <article className="rounded-3xl border border-red-200 bg-gradient-to-br from-red-50 via-white to-sky-50 p-6 shadow-xl shadow-slate-900/5 dark:border-red-400/20 dark:from-red-500/12 dark:via-white/[0.06] dark:to-sky-500/10 lg:col-span-3">
               <div>
-                <span className="text-xs font-black uppercase text-red-500">{language === 'es' ? 'Sistema prioritario' : 'Priority system'}</span>
-                <h3 className="mt-3 text-2xl font-black text-slate-950 dark:text-white">{emergency.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{emergency.description}</p>
-              </div>
-              <div className="relative min-h-64 rounded-3xl border border-slate-200 bg-white/80 p-5 dark:border-white/10 dark:bg-slate-950/80" aria-hidden="true">
-                <div className="grid h-24 w-24 place-items-center rounded-full bg-red-500 text-xl font-black text-white shadow-[0_0_36px_rgba(239,68,68,0.55)]">SOS</div>
-                <div className="absolute right-5 top-5 grid gap-2">
-                  <span className="h-8 w-8 rounded-full bg-red-500 shadow-[0_0_24px_rgba(239,68,68,0.55)]" />
-                  <span className="h-8 w-8 rounded-full bg-amber-500 shadow-[0_0_22px_rgba(245,158,11,0.48)]" />
-                  <span className="h-8 w-8 rounded-full bg-emerald-500 shadow-[0_0_22px_rgba(34,197,94,0.42)]" />
+                <span className="text-xs font-black uppercase tracking-wide text-red-500">
+                  {labels.prioritySystem}
+                </span>
+
+                <h3 className="mt-3 text-2xl font-black text-slate-950 dark:text-white">
+                  {emergency.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {emergency.description}
+                </p>
+
+                <div className="mt-6 grid gap-4">
+                  {emergencyFeatures.map((feature) => {
+                    const Icon = feature.icon;
+
+                    return (
+                      <div key={feature.title} className="flex gap-4">
+                        <div
+                          className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${
+                            iconTone[feature.tone as keyof typeof iconTone]
+                          }`}
+                        >
+                          <Icon size={22} strokeWidth={2.4} />
+                        </div>
+
+                        <div>
+                          <h4 className="text-sm font-black text-slate-950 dark:text-white">
+                            {feature.title}
+                          </h4>
+                          <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-                <div className="absolute bottom-16 left-5 rounded-full bg-sky-500/10 px-3 py-2 text-xs font-black text-sky-700 dark:text-sky-300">{language === 'es' ? 'Ubicación activa' : 'Live location'}</div>
-                <div className="absolute bottom-5 right-5 rounded-full bg-emerald-500/10 px-3 py-2 text-xs font-black text-emerald-700 dark:text-emerald-300">{language === 'es' ? 'Respuesta activa' : 'Active response'}</div>
               </div>
             </article>
 
-            <article className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-xl shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.06] lg:col-span-3">
+            <article className="grid gap-6 rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-xl shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.06] lg:col-span-3 lg:grid-cols-[0.9fr_1.1fr]">
               <div>
-                <span className="text-xs font-black uppercase text-sky-600 dark:text-sky-300">{language === 'es' ? 'Consulta digital' : 'Digital visit'}</span>
-                <h3 className="mt-3 text-2xl font-black text-slate-950 dark:text-white">{telemedicine.title}</h3>
-              </div>
-              <div className="mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-white/10 dark:bg-slate-950/70" aria-hidden="true">
-                <div className="grid h-40 place-items-center rounded-2xl bg-gradient-to-br from-sky-500/20 to-teal-500/20">
-                  <span className="h-20 w-20 rounded-full bg-gradient-to-br from-slate-700 to-slate-950 ring-8 ring-white/60 dark:ring-white/10" />
+                <span className="text-xs font-black uppercase tracking-wide text-sky-600 dark:text-sky-300">
+                  {labels.digitalVisit}
+                </span>
+
+                <h3 className="mt-3 text-2xl font-black text-slate-950 dark:text-white">
+                  {telemedicine.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {telemedicine.description}
+                </p>
+
+                <div className="mt-6 grid gap-4">
+                  {telemedicineFeatures.map((feature) => {
+                    const Icon = feature.icon;
+
+                    return (
+                      <div key={feature.title} className="flex gap-4">
+                        <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300">
+                          <Icon size={22} strokeWidth={2.4} />
+                        </div>
+
+                        <div>
+                          <h4 className="text-sm font-black text-slate-950 dark:text-white">
+                            {feature.title}
+                          </h4>
+                          <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
+              </div>
+
+              <div
+                className="flex flex-col justify-center rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-white/10 dark:bg-slate-950/70"
+                aria-hidden="true"
+              >
+                <div className="grid h-36 place-items-center rounded-2xl bg-gradient-to-br from-sky-500/20 to-teal-500/20">
+                  <span className="h-20 w-20 rounded-full bg-gradient-to-br from-slate-700 to-slate-950 ring-8 ring-white/70 dark:ring-white/10" />
+                </div>
+
                 <div className="mt-4 flex justify-center gap-3">
-                  {[0, 1, 2].map((item) => <i key={item} className="h-10 w-10 rounded-full bg-white shadow-sm dark:bg-white/10" />)}
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-700 shadow-sm dark:bg-white/10 dark:text-slate-200">
+                    <Mic size={18} />
+                  </span>
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-700 shadow-sm dark:bg-white/10 dark:text-slate-200">
+                    <Video size={18} />
+                  </span>
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-red-500 text-white shadow-lg shadow-red-500/25">
+                    <Stethoscope size={18} />
+                  </span>
                 </div>
-                <p className="mt-4 text-center text-sm font-bold text-slate-600 dark:text-slate-300">{language === 'es' ? 'Médico conectado' : 'Doctor connected'}</p>
+
+                <div className="mt-5 rounded-2xl border border-slate-200 bg-white/70 p-4 shadow-sm dark:border-white/10 dark:bg-white/5">
+                  <div className="flex items-center gap-3">
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                    <strong className="text-sm font-black text-slate-950 dark:text-white">
+                      {labels.doctorConnected}
+                    </strong>
+                  </div>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {labels.doctorConnectedDescription}
+                  </p>
+                </div>
               </div>
             </article>
 
             <article className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-xl shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.06] lg:col-span-2">
-              <div>
-                <span className="text-xs font-black uppercase text-teal-700 dark:text-teal-300">{language === 'es' ? 'Evolución clínica' : 'Clinical progress'}</span>
-                <h3 className="mt-3 text-xl font-black text-slate-950 dark:text-white">{history.title}</h3>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <span className="text-xs font-black uppercase tracking-wide text-teal-700 dark:text-teal-300">
+                    {labels.clinicalProgress}
+                  </span>
+
+                  <h3 className="mt-3 text-xl font-black text-slate-950 dark:text-white">
+                    {history.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {history.description}
+                  </p>
+                </div>
+
+                <ClipboardList className="hidden text-emerald-300 sm:block" size={70} strokeWidth={1.8} />
               </div>
-              <div className="mt-8 grid gap-3" aria-hidden="true">
-                {[80, 62, 90].map((width) => <span key={width} className="h-4 rounded-full bg-slate-200 dark:bg-white/10" style={{ width: `${width}%` }} />)}
-                <div className="mt-3 h-2 rounded-full bg-gradient-to-r from-red-500 via-amber-500 to-emerald-500" />
+
+              <div className="mt-6 grid gap-3" aria-hidden="true">
+                {labels.historyItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 text-sm font-bold text-slate-600 dark:bg-white/10 dark:text-slate-300"
+                  >
+                    <span className="h-2 w-2 rounded-full bg-teal-500" />
+                    {item}
+                  </div>
+                ))}
+
+                <div className="mt-2 h-2 rounded-full bg-gradient-to-r from-red-500 via-amber-500 to-emerald-500" />
               </div>
             </article>
 
             <article className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-xl shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.06] lg:col-span-2">
-              <div>
-                <span className="text-xs font-black uppercase text-emerald-700 dark:text-emerald-300">{language === 'es' ? 'Acompañamiento' : 'Support'}</span>
-                <h3 className="mt-3 text-xl font-black text-slate-950 dark:text-white">{family.title}</h3>
-              </div>
-              <div className="mt-8 grid place-items-center gap-4" aria-hidden="true">
-                <div className="flex items-center gap-4">
-                  <div className="grid h-14 w-14 place-items-center rounded-full bg-teal-500 text-white font-black">P</div>
-                  <div className="h-1 w-14 rounded-full bg-teal-500/40" />
-                  <div className="grid h-14 w-14 place-items-center rounded-full bg-sky-500 text-white font-black">F</div>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <span className="text-xs font-black uppercase tracking-wide text-emerald-700 dark:text-emerald-300">
+                    {labels.support}
+                  </span>
+
+                  <h3 className="mt-3 text-xl font-black text-slate-950 dark:text-white">
+                    {family.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {family.description}
+                  </p>
                 </div>
-                <strong className="rounded-full bg-emerald-500/10 px-3 py-2 text-xs font-black text-emerald-700 dark:text-emerald-300">{language === 'es' ? 'Notificación enviada' : 'Notification sent'}</strong>
+
+                <div className="hidden items-center gap-3 sm:flex">
+                  <div className="grid h-14 w-14 place-items-center rounded-full bg-teal-500 font-black text-white shadow-lg shadow-teal-500/20">
+                    P
+                  </div>
+                  <div className="h-1 w-12 rounded-full bg-teal-500/40" />
+                  <div className="grid h-14 w-14 place-items-center rounded-full bg-sky-500 font-black text-white shadow-lg shadow-sky-500/20">
+                    F
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-3">
+                {labels.familyItems.map((item) => (
+                  <div key={item.title} className="flex gap-3">
+                    <div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">
+                      <Users size={18} />
+                    </div>
+                    <div>
+                      <strong className="text-sm font-black text-slate-950 dark:text-white">
+                        {item.title}
+                      </strong>
+                      <p className="text-sm leading-5 text-slate-600 dark:text-slate-300">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+
+                <strong className="mt-1 w-fit rounded-full bg-emerald-500/10 px-3 py-2 text-xs font-black text-emerald-700 dark:text-emerald-300">
+                  {labels.notificationSent}
+                </strong>
               </div>
             </article>
 
             <article className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-xl shadow-slate-900/5 dark:border-white/10 dark:bg-white/[0.06] lg:col-span-2">
-              <div>
-                <span className="text-xs font-black uppercase text-violet-700 dark:text-violet-300">{language === 'es' ? 'Equipo clínico' : 'Care team'}</span>
-                <h3 className="mt-3 text-xl font-black text-slate-950 dark:text-white">{professional.title}</h3>
-              </div>
-              <div className="mt-8 grid gap-4" aria-hidden="true">
-                <div className="h-5 rounded-full bg-slate-200 dark:bg-white/10" />
-                <div className="h-5 w-2/3 rounded-full bg-slate-200 dark:bg-white/10" />
-                <div className="flex gap-2">
-                  {[0, 1, 2].map((item) => <span key={item} className="h-10 flex-1 rounded-2xl bg-violet-500/10" />)}
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <span className="text-xs font-black uppercase tracking-wide text-violet-700 dark:text-violet-300">
+                    {labels.careTeam}
+                  </span>
+
+                  <h3 className="mt-3 text-xl font-black text-slate-950 dark:text-white">
+                    {professional.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    {professional.description}
+                  </p>
                 </div>
+
+                <div className="hidden rounded-full bg-violet-100 p-5 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300 sm:block">
+                  <Users size={46} />
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-3" aria-hidden="true">
+                {labels.professionalItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center justify-between rounded-2xl bg-violet-50 px-4 py-3 text-sm font-bold text-slate-600 dark:bg-violet-500/10 dark:text-slate-300"
+                  >
+                    <span>{item}</span>
+                    <span className="h-2 w-2 rounded-full bg-violet-500" />
+                  </div>
+                ))}
               </div>
             </article>
 
-            <article className="grid gap-6 rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-900 to-cyan-950 p-6 text-white shadow-xl shadow-slate-900/10 lg:col-span-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <article className="grid gap-6 rounded-3xl border border-cyan-200 bg-gradient-to-br from-cyan-50 via-white to-teal-50 p-6 text-slate-950 shadow-xl shadow-slate-900/5 dark:border-white/10 dark:from-slate-900 dark:to-cyan-950 dark:text-white dark:shadow-slate-900/10 lg:col-span-6 lg:grid-cols-[0.85fr_1.15fr]">
               <div>
-                <span className="text-xs font-black uppercase text-teal-200">{language === 'es' ? 'Operación institucional' : 'Institutional ops'}</span>
-                <h3 className="mt-3 text-2xl font-black">{operations.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-300">{operations.description}</p>
+                <span className="text-xs font-black uppercase tracking-wide text-teal-700 dark:text-teal-200">
+                  {labels.institutionalOps}
+                </span>
+
+                <h3 className="mt-3 text-2xl font-black">
+                  {operations.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {operations.description}
+                </p>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2" aria-hidden="true">
-                <div className="rounded-2xl border border-white/10 bg-white/10 p-5">
-                  <strong className="text-3xl font-black">128</strong>
-                  <span className="block text-sm text-slate-300">{language === 'es' ? 'Usuarios' : 'Users'}</span>
+
+              <div className="grid gap-4 md:grid-cols-3" aria-hidden="true">
+                <div className="flex gap-4 rounded-2xl border border-cyan-200 bg-white/70 p-5 shadow-sm dark:border-white/10 dark:bg-white/10">
+                  <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-teal-50 text-teal-600 dark:bg-teal-500/10 dark:text-teal-300">
+                    <Users size={30} />
+                  </div>
+
+                  <div>
+                    <strong className="text-3xl font-black">128</strong>
+                    <span className="block text-sm font-bold text-slate-700 dark:text-slate-300">
+                      {labels.users}
+                    </span>
+                    <span className="mt-1 block text-sm leading-5 text-slate-600 dark:text-slate-300">
+                      {labels.userMetricDescription}
+                    </span>
+                  </div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/10 p-5">
-                  <strong className="text-3xl font-black">3</strong>
-                  <span className="block text-sm text-slate-300">{language === 'es' ? 'Sedes' : 'Sites'}</span>
+
+                <div className="flex gap-4 rounded-2xl border border-cyan-200 bg-white/70 p-5 shadow-sm dark:border-white/10 dark:bg-white/10">
+                  <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-teal-50 text-teal-600 dark:bg-teal-500/10 dark:text-teal-300">
+                    <Building2 size={30} />
+                  </div>
+
+                  <div>
+                    <strong className="text-3xl font-black">3</strong>
+                    <span className="block text-sm font-bold text-slate-700 dark:text-slate-300">
+                      {labels.sites}
+                    </span>
+                    <span className="mt-1 block text-sm leading-5 text-slate-600 dark:text-slate-300">
+                      {labels.siteMetricDescription}
+                    </span>
+                  </div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/10 p-5 sm:col-span-2">
-                  <strong className="text-xl font-black">{patientApp.title}</strong>
-                  <span className="block text-sm text-slate-300">{language === 'es' ? 'App conectada al ecosistema' : 'App connected to the ecosystem'}</span>
+
+                <div className="flex gap-4 rounded-2xl border border-cyan-200 bg-white/70 p-5 shadow-sm dark:border-white/10 dark:bg-white/10">
+                  <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-teal-50 text-teal-600 dark:bg-teal-500/10 dark:text-teal-300">
+                    <Smartphone size={30} />
+                  </div>
+
+                  <div>
+                    <strong className="text-xl font-black">
+                      {patientApp.title}
+                    </strong>
+                    <span className="mt-1 block text-sm leading-5 text-slate-600 dark:text-slate-300">
+                      {labels.patientAppMetric}
+                    </span>
+                  </div>
                 </div>
               </div>
             </article>

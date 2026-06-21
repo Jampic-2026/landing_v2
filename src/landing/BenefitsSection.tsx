@@ -45,9 +45,6 @@ export default function BenefitsSection({ language }: { language: Language }) {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 rounded-2xl border border-teal-400/20 bg-teal-400/10 p-3 text-xs font-black text-teal-700 dark:text-teal-300">
-                    {language === 'es' ? 'Perfil conectado' : 'Connected profile'}
-                  </div>
                 </article>
               );
             })}

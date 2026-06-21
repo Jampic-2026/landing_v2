@@ -18,7 +18,7 @@ export default function TrustSection({ language }: { language: Language }) {
             <div className="relative grid min-h-[360px] place-items-center rounded-3xl border border-white/10 bg-white/[0.06] p-8" aria-hidden="true">
               <div className="absolute inset-8 rounded-full border border-dashed border-teal-300/25" />
               <div className="grid gap-3">
-                {['Acceso', 'Permisos', 'Historial'].map((item) => (
+                {content.pillars.map((item) => (
                   <span key={item} className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 text-sm font-black text-slate-200">
                     {item}
                   </span>

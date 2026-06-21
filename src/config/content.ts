@@ -14,32 +14,26 @@ export const landingContent = {
       cta: 'Solicitar demo',
     },
     hero: {
-      badge: 'Salud digital conectada',
       title: 'Atención médica conectada, rápida y segura',
-      subtitle:
-        'Hampiq conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
+      subtitle: 'Hampiq conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
       primaryCta: 'Solicitar demo',
       secondaryCta: 'Ver cómo funciona',
       dashboardAlt: 'Panel médico en tiempo real de Hampiq',
       mobileAlt: 'Aplicación móvil de Hampiq',
       features: [
         {
-          icon: '🛡️',
           title: 'Respuestas inmediatas',
           description: 'Cuando más importa',
         },
         {
-          icon: '🔒',
           title: 'Información segura',
           description: 'Privacidad garantizada',
         },
         {
-          icon: '👥',
           title: 'Todos conectados',
           description: 'Un ecosistema único',
         },
         {
-          icon: '📊',
           title: 'Datos en tiempo real',
           description: 'Decisiones más rápidas',
         },
@@ -47,19 +41,16 @@ export const landingContent = {
     },
     missionVision: {
       missionTitle: 'Misión',
-      mission:
-        'Transformar el acceso a la salud mediante tecnología, coordinación y atención oportuna, conectando personas y profesionales en un ecosistema médico inteligente.',
+      mission: 'Transformar el acceso a la salud mediante tecnología, coordinación y atención oportuna, conectando personas y profesionales en un ecosistema médico inteligente.',
       visionTitle: 'Visión',
-      vision:
-        'Convertirnos en la plataforma líder de salud digital en Latinoamérica, impulsando una atención más accesible, humana y conectada.',
+      vision: 'Convertirnos en la plataforma líder de salud digital en Latinoamérica, impulsando una atención más accesible, humana y conectada.',
       tagline: 'Salud más cercana, humana y conectada.',
     },
     emergencySystem: {
       title: 'Respuesta rápida cuando más importa',
-      subtitle:
-        'Hampiq clasifica la prioridad de atención mediante un sistema de semáforo para coordinar respuestas oportunas.',
-      sideNote:
-        'Cada alerta puede ser enviada al equipo correspondiente según prioridad, ubicación y disponibilidad.',
+      subtitle: 'Hampiq clasifica la prioridad de atención mediante un sistema de semáforo para coordinar respuestas oportunas.',
+      sideTitle: 'Coordinación inteligente',
+      sideNote: 'Cada alerta puede ser enviada al equipo correspondiente según prioridad, ubicación y disponibilidad.',
       levels: [
         {
           title: 'Emergencia crítica',
@@ -80,8 +71,7 @@ export const landingContent = {
     },
     familyCare: {
       title: 'Porque la salud también se cuida en familia',
-      subtitle:
-        'Hampiq permite que familiares autorizados acompañen el estado de salud del paciente, reciban actualizaciones y participen en momentos importantes.',
+      subtitle: 'Hampiq permite que familiares autorizados acompañen el estado de salud del paciente, reciban actualizaciones y participen en momentos importantes.',
       items: [
         'Vinculación de familiar o cuidador',
         'Notificaciones ante emergencias',
@@ -94,7 +84,9 @@ export const landingContent = {
         relative: 'Familiar autorizado',
         status: 'En seguimiento',
         lastCare: 'Última atención registrada',
+        telemedicine: 'Teleconsulta completada',
         notify: 'Notificar familiar',
+        notifyed: 'Familiar notificado',
       },
     },
     pillars: {
@@ -111,14 +103,15 @@ export const landingContent = {
     },
     problem: {
       title: 'El acceso a la salud sigue siendo lento, disperso y poco coordinado',
-      subtitle:
-        'Pacientes, médicos e instituciones suelen operar con información separada, tiempos largos y procesos poco conectados.',
+      subtitle: 'Pacientes, médicos e instituciones suelen operar con información separada, tiempos largos y procesos poco conectados.',
       items: [
         'Atención fragmentada',
         'Respuesta lenta ante emergencias',
         'Dificultad para conectar con especialistas',
         'Falta de historial centralizado',
       ],
+      patient: 'Paciente',
+      needCare: 'Necesita atención',
     },
     solution: {
       title: 'Un ecosistema conectado para cada etapa de la atención',
@@ -130,6 +123,7 @@ export const landingContent = {
         { title: 'Gestión de profesionales', description: 'Herramientas para equipos y equipos clínicos.' },
         { title: 'Coordinación de atención', description: 'Flujos integrados entre pacientes, médicos e instituciones.' },
       ],
+      ecosystem: 'Ecosistema',
     },
     howItWorks: {
       title: 'Cómo funciona Hampiq',
@@ -142,6 +136,73 @@ export const landingContent = {
     },
     modules: {
       title: 'Módulos principales',
+      labels: {
+        prioritySystem: 'Sistema prioritario',
+        digitalVisit: 'Consulta digital',
+        clinicalProgress: 'Evolución clínica',
+        support: 'Acompañamiento',
+        careTeam: 'Equipo clínico',
+        institutionalOps: 'Operación institucional',
+        activeLocation: 'Ubicación activa',
+        activeResponse: 'Respuesta activa',
+        doctorConnected: 'Médico conectado',
+        notificationSent: 'Notificación enviada',
+        users: 'Usuarios',
+        sites: 'Sedes',
+        historyItems: ['Atenciones registradas', 'Síntomas reportados', 'Notas médicas consolidadas'],
+        professionalItems: ['Agenda médica', 'Notas clínicas', 'Disponibilidad del equipo'],
+        patientAppMetric: 'Acceso directo para emergencias, consultas e historial.',
+        telemedicineItems: [
+          'Consulta remota segura',
+          'Especialistas disponibles',
+          'Seguimiento posterior',
+        ],
+        emergencyFeatures: [
+          {
+            title: 'Ubicación en tiempo real',
+            description: 'Permite identificar el lugar exacto de la emergencia.',
+          },
+          {
+            title: 'Clasificación por prioridad',
+            description: 'Alerta clasificada para una respuesta más eficiente.',
+          },
+          {
+            title: 'Respuesta inmediata',
+            description: 'Notificación automática al equipo de atención.',
+          },
+        ],
+        telemedicineFeatures: [
+          {
+            title: 'Videoconsulta segura',
+            description: 'Comunicación en tiempo real con especialistas.',
+          },
+          {
+            title: 'Historial integrado',
+            description: 'Acceso al historial clínico durante la consulta.',
+          },
+          {
+            title: 'Agendamiento fácil',
+            description: 'Reserva de consultas según disponibilidad.',
+          },
+        ],
+        doctorConnectedDescription: 'Especialista disponible para ti.',
+        familyItems: [
+          {
+            title: 'Acceso autorizado',
+            description: 'Familiares con permisos definidos.',
+          },
+          {
+            title: 'Alertas inteligentes',
+            description: 'Notificaciones ante eventos importantes.',
+          },
+          {
+            title: 'Seguimiento familiar',
+            description: 'Información actualizada del paciente.',
+          },
+        ],
+        userMetricDescription: 'Gestión de cuentas y permisos.',
+        siteMetricDescription: 'Centros de atención activos.',
+      },
       cards: [
         {
           title: 'Emergencias',
@@ -214,6 +275,7 @@ export const landingContent = {
         'Trazabilidad de atenciones',
         'Auditoría de acciones',
       ],
+      pillars: ['Acceso', 'Permisos', 'Historial'],
     },
     technology: {
       title: 'Tecnología que impulsa Hampiq',
@@ -229,21 +291,49 @@ export const landingContent = {
     },
     partners: {
       title: 'Potenciado por líderes tecnológicos',
-      subtitle:
-        'Hampiq integra tecnologías modernas para ofrecer una experiencia segura, escalable y confiable.',
+      subtitle: 'Hampiq integra tecnologías modernas para ofrecer una experiencia segura, escalable y confiable.',
       items: ['Google', 'OpenAI', 'Firebase', 'Docker'],
     },
     team: {
       title: 'Las personas detrás de Hampiq',
-      subtitle:
-        'Hampiq es construido por un equipo multidisciplinario comprometido con transformar la salud mediante tecnología.',
+      subtitle: 'Hampiq es construido por un equipo multidisciplinario comprometido con transformar la salud mediante tecnología.',
       members: [
-        { name: 'Integrante 01', role: 'CTO & Lead Software Engineer', description: 'Arquitectura técnica y dirección de producto.' },
-        { name: 'Integrante 02', role: 'Full Stack Developer', description: 'Experiencias web, APIs y flujos operativos.' },
-        { name: 'Integrante 03', role: 'Mobile Developer', description: 'Aplicaciones móviles para pacientes y profesionales.' },
-        { name: 'Integrante 04', role: 'UI/UX Designer', description: 'Diseño de experiencia, accesibilidad e interfaz.' },
-        { name: 'Integrante 05', role: 'AI Engineer', description: 'Automatización, clasificación y asistencia inteligente.' },
-        { name: 'Integrante 06', role: 'Product Manager', description: 'Estrategia, validación y coordinación del roadmap.' },
+        {
+          name: 'Brayan Mejía',
+          image: '/team/brayan-mejia.png',
+          role: 'CEO e Ingeniero Biomédico',
+          description: 'Lidera la visión de la empresa, la estrategia de innovación en salud y el desarrollo de soluciones orientadas a necesidades médicas reales.',
+        },
+        {
+          name: 'Laura Nuñez',
+          image: '/team/laura-nunez.png',
+          role: 'CTO & Lead Software Engineer',
+          description: 'Dirige la arquitectura de software, la ingeniería de la plataforma, las APIs y la ejecución técnica de todo el ecosistema.',
+        },
+        {
+          name: 'Mishel Bravo',
+          image: '/team/mishel-bravo.png',
+          role: 'Chief AI Officer (CAIO)',
+          description: 'Impulsa la estrategia de inteligencia artificial, los sistemas de apoyo a la toma de decisiones clínicas y la evolución de los servicios inteligentes.',
+        },
+        {
+          name: 'Luis Ferreyra',
+          image: '/team/luis-ferreyra.png',
+          role: 'Co-Fundador y CMO',
+          description: 'Lidera el crecimiento, las alianzas estratégicas, el posicionamiento de marca y la expansión comercial de la plataforma.',
+        },
+        {
+          name: 'Sergio Vásquez',
+          image: '/team/sergio-vasquez.png',
+          role: 'Especialista en Análisis de Costos',
+          description: 'Desarrolla modelos de costos, estructuras de precios y análisis financieros para respaldar decisiones sostenibles basadas en datos.',
+        },
+        {
+          name: 'Melissa Herrera',
+          image: '/team/melissa-herrera.png',
+          role: 'Coordinadora de Relaciones Médicas',
+          description: 'Gestiona la relación con profesionales de la salud, apoya los procesos de validación médica y fortalece la colaboración clínica.',
+        },
       ],
     },
     impact: {
@@ -255,22 +345,17 @@ export const landingContent = {
         { value: '1 Plataforma', label: 'Todo el ecosistema conectado.' },
         { value: '100%', label: 'Trazabilidad de atención.' },
       ],
+      projection: 'Proyección',
     },
     finalCta: {
       title: 'Construyamos una atención médica más conectada',
       subtitle: 'Hampiq nace para acercar atención, tecnología y personas en los momentos donde la salud no puede esperar.',
       primaryCta: 'Solicitar demo',
       secondaryCta: 'Contactar al equipo',
+      care: 'Cuidado conectado',
     },
     footer: {
-      description: 'Hampiq conecta personas, profesionales y servicios médicos en una plataforma de salud digital moderna.',
-      links: [
-        { label: 'Inicio', href: '#inicio' },
-        { label: 'Soluciones', href: '#soluciones' },
-        { label: 'Cómo funciona', href: '#como-funciona' },
-        { label: 'Beneficios', href: '#beneficios' },
-        { label: 'Contacto', href: '#contacto' },
-      ],
+      copyright: '© 2026 Hampiq. Todos los derechos reservados.',
     },
   },
   en: {
@@ -285,32 +370,26 @@ export const landingContent = {
       cta: 'Request demo',
     },
     hero: {
-      badge: 'Connected digital health',
       title: 'Connected, fast and secure healthcare',
       subtitle: 'Hampiq connects patients, families, healthcare professionals and institutions in an intelligent medical ecosystem.',
       primaryCta: 'Request demo',
       secondaryCta: 'See how it works',
       dashboardAlt: 'Hampiq real-time medical dashboard',
       mobileAlt: 'Hampiq mobile application',
-
       features: [
         {
-          icon: '🛡️',
           title: 'Instant response',
           description: 'When it matters most',
         },
         {
-          icon: '🔒',
           title: 'Secure information',
           description: 'Privacy guaranteed',
         },
         {
-          icon: '👥',
           title: 'Everyone connected',
           description: 'A unified ecosystem',
         },
         {
-          icon: '📊',
           title: 'Real-time data',
           description: 'Faster decisions',
         },
@@ -318,19 +397,16 @@ export const landingContent = {
     },
     missionVision: {
       missionTitle: 'Mission',
-      mission:
-        'Transform access to healthcare through technology, coordination and timely care, connecting people and professionals in an intelligent medical ecosystem.',
+      mission: 'Transform access to healthcare through technology, coordination and timely care, connecting people and professionals in an intelligent medical ecosystem.',
       visionTitle: 'Vision',
-      vision:
-        'Become the leading digital health platform in Latin America, powering more accessible, human and connected care.',
+      vision: 'Become the leading digital health platform in Latin America, powering more accessible, human and connected care.',
       tagline: 'Closer, more human and connected healthcare.',
     },
     emergencySystem: {
       title: 'Fast response when it matters most',
-      subtitle:
-        'Hampiq classifies care priority through a semaphore system to coordinate timely responses.',
-      sideNote:
-        'Each alert can be sent to the right team based on priority, location and availability.',
+      subtitle: 'Hampiq classifies care priority through a semaphore system to coordinate timely responses.',
+      sideTitle: 'Smart coordination',
+      sideNote: 'Each alert can be sent to the right team based on priority, location and availability.',
       levels: [
         {
           title: 'Critical emergency',
@@ -351,8 +427,7 @@ export const landingContent = {
     },
     familyCare: {
       title: 'Because health is also cared for as a family',
-      subtitle:
-        'Hampiq allows authorized family members to follow the patient health status, receive updates and participate in important moments.',
+      subtitle: 'Hampiq allows authorized family members to follow the patient health status, receive updates and participate in important moments.',
       items: [
         'Family member or caregiver linking',
         'Emergency notifications',
@@ -365,7 +440,9 @@ export const landingContent = {
         relative: 'Authorized family member',
         status: 'In follow-up',
         lastCare: 'Latest care recorded',
+        telemedicine: 'Telemedicine completed',
         notify: 'Notify family member',
+        notifyed: 'Family member notified',
       },
     },
     pillars: {
@@ -382,14 +459,15 @@ export const landingContent = {
     },
     problem: {
       title: 'Access to healthcare is still slow, fragmented and poorly coordinated',
-      subtitle:
-        'Patients, doctors and institutions often operate with separated information, long waiting times and disconnected processes.',
+      subtitle: 'Patients, doctors and institutions often operate with separated information, long waiting times and disconnected processes.',
       items: [
         'Fragmented care',
         'Slow emergency response',
         'Difficulty connecting with specialists',
         'Lack of centralized history',
       ],
+      patient: 'Patient',
+      needCare: 'Needs care',
     },
     solution: {
       title: 'A connected ecosystem for every stage of care',
@@ -401,6 +479,7 @@ export const landingContent = {
         { title: 'Professional management', description: 'Tools for care teams and clinical staff.' },
         { title: 'Care coordination', description: 'Integrated workflows across patients, providers and institutions.' },
       ],
+      ecosystem: 'Ecosystem',
     },
     howItWorks: {
       title: 'How Hampiq works',
@@ -413,6 +492,69 @@ export const landingContent = {
     },
     modules: {
       title: 'Core product modules',
+      labels: {
+        prioritySystem: 'Priority system',
+        digitalVisit: 'Digital visit',
+        clinicalProgress: 'Clinical progress',
+        support: 'Support',
+        careTeam: 'Care team',
+        institutionalOps: 'Institutional ops',
+        activeLocation: 'Live location',
+        activeResponse: 'Active response',
+        doctorConnected: 'Doctor connected',
+        notificationSent: 'Notification sent',
+        users: 'Users',
+        sites: 'Sites',
+        historyItems: ['Registered care events', 'Reported symptoms', 'Consolidated medical notes'],
+        professionalItems: ['Medical schedule', 'Clinical notes', 'Team availability'],
+        patientAppMetric: 'Direct access to emergencies, consultations and history.',
+        telemedicineItems: ['Secure remote visit', 'Available specialists', 'Post-consultation follow-up'],
+        emergencyFeatures: [
+          {
+            title: 'Real time location',
+            description: 'It allows you to identify the exact location of the emergency.',
+          },
+          {
+            title: 'Sorting by priority',
+            description: 'Classified alert for a more efficient response.',
+          },
+          {
+            title: 'Immediate Response',
+            description: 'Automatic notification to the support team.',
+          },
+        ],
+        telemedicineFeatures: [
+          {
+            title: 'Secure Video Consultation',
+            description: 'Real-time communication with specialists.',
+          },
+          {
+            title: 'Integrated Medical History',
+            description: 'Access to medical records during the consultation.',
+          },
+          {
+            title: 'Easy Scheduling',
+            description: 'Book appointments based on availability.',
+          },
+        ],
+        doctorConnectedDescription: 'Specialist available for you.',
+        familyItems: [
+          {
+            title: 'Authorized access',
+            description: 'Family members with defined permissions.',
+          },
+          {
+            title: 'Smart alerts',
+            description: 'Notifications for important events.',
+          },
+          {
+            title: 'Family follow-up',
+            description: 'Updated patient information.',
+          },
+        ],
+        userMetricDescription: 'Account and permission management.',
+        siteMetricDescription: 'Active care centers.',
+      },
       cards: [
         {
           title: 'Emergencies',
@@ -485,6 +627,7 @@ export const landingContent = {
         'Care traceability',
         'Action auditing',
       ],
+      pillars: ['Access', 'Permissions', 'History'],
     },
     technology: {
       title: 'Technology powering Hampiq',
@@ -500,21 +643,49 @@ export const landingContent = {
     },
     partners: {
       title: 'Powered by technology leaders',
-      subtitle:
-        'Hampiq integrates modern technologies to deliver a secure, scalable and reliable experience.',
+      subtitle: 'Hampiq integrates modern technologies to deliver a secure, scalable and reliable experience.',
       items: ['Google', 'OpenAI', 'Firebase', 'Docker'],
     },
     team: {
       title: 'The people behind Hampiq',
-      subtitle:
-        'Hampiq is built by a multidisciplinary team committed to transforming healthcare through technology.',
+      subtitle: 'Hampiq is built by a multidisciplinary team committed to transforming healthcare through technology.',
       members: [
-        { name: 'Member 01', role: 'CTO & Lead Software Engineer', description: 'Technical architecture and product direction.' },
-        { name: 'Member 02', role: 'Full Stack Developer', description: 'Web experiences, APIs and operational flows.' },
-        { name: 'Member 03', role: 'Mobile Developer', description: 'Mobile apps for patients and professionals.' },
-        { name: 'Member 04', role: 'UI/UX Designer', description: 'Experience design, accessibility and interface.' },
-        { name: 'Member 05', role: 'AI Engineer', description: 'Automation, classification and intelligent assistance.' },
-        { name: 'Member 06', role: 'Product Manager', description: 'Strategy, validation and roadmap coordination.' },
+        {
+          name: 'Brayan Mejía',
+          image: '/team/brayan-mejia.png',
+          role: 'CEO & Biomedical Engineer',
+          description: 'Leads the company vision, healthcare innovation strategy, and product development aligned with real-world medical needs.',
+        },
+        {
+          name: 'Laura Nuñez',
+          image: '/team/laura-nunez.png',
+          role: 'CTO & Lead Software Engineer',
+          description: 'Leads software architecture, platform engineering, APIs, and the technical execution of the ecosystem.',
+        },
+        {
+          name: 'Mishel Bravo',
+          image: '/team/mishel-bravo.png',
+          role: 'Chief AI Officer (CAIO)',
+          description: 'Drives artificial intelligence strategy, clinical decision-support systems, and the evolution of intelligent healthcare services.',
+        },
+        {
+          name: 'Luis Ferreyra',
+          image: '/team/luis-ferreyra.png',
+          role: 'Co-Founder & CMO',
+          description: 'Leads growth, partnerships, market positioning, and communication strategies to expand the platform reach.',
+        },
+        {
+          name: 'Sergio Vásquez',
+          image: '/team/sergio-vasquez.png',
+          role: 'Cost Analysis Specialist',
+          description: 'Develops cost models, pricing structures, and financial analysis frameworks to ensure sustainable and data-driven decisions.',
+        },
+        {
+          name: 'Melissa Herrera',
+          image: '/team/melissa-herrera.png',
+          role: 'Medical Relations Coordinator',
+          description: 'Coordinates relationships with healthcare professionals, supports medical validation, and facilitates clinical collaboration.',
+        },
       ],
     },
     impact: {
@@ -526,22 +697,17 @@ export const landingContent = {
         { value: '1 Platform', label: 'The whole ecosystem connected.' },
         { value: '100%', label: 'Care traceability.' },
       ],
+      projection: 'Projection',
     },
     finalCta: {
       title: 'Let’s build more connected healthcare',
       subtitle: 'Hampiq was born to bring care, technology and people closer in the moments when health cannot wait.',
       primaryCta: 'Request demo',
       secondaryCta: 'Contact the team',
+      care: 'Care connected',
     },
     footer: {
-      description: 'Hampiq connects people, professionals and medical services in a modern digital health platform.',
-      links: [
-        { label: 'Home', href: '#inicio' },
-        { label: 'Solutions', href: '#soluciones' },
-        { label: 'How it works', href: '#como-funciona' },
-        { label: 'Benefits', href: '#beneficios' },
-        { label: 'Contact', href: '#contacto' },
-      ],
+      copyright: '© 2026 Hampiq. All rights reserved',
     },
   },
 };

@@ -38,13 +38,13 @@ export default function FamilyCareSection({ language }: { language: Language }) 
               </div>
               <div className="rounded-2xl border border-teal-400/20 bg-teal-400/10 p-4">
                 <span className="text-xs font-bold text-teal-700 dark:text-teal-300">{content.mockup.lastCare}</span>
-                <strong className="mt-1 block text-base font-black text-slate-950 dark:text-white">Teleconsulta completada</strong>
+                <strong className="mt-1 block text-base font-black text-slate-950 dark:text-white">{content.mockup.telemedicine}</strong>
               </div>
               <button type="button" className={primaryButton}>{content.mockup.notify}</button>
             </div>
             <div className="absolute bottom-10 right-0 rounded-2xl border border-red-400/25 bg-red-500 p-4 text-white shadow-2xl shadow-red-500/30">
               <span className="text-xs font-black">SOS</span>
-              <strong className="block text-sm font-black">{language === 'es' ? 'Familiar notificado' : 'Family notified'}</strong>
+              <strong className="block text-sm font-black">{content.mockup.notifyed}</strong>
             </div>
           </div>
         </AnimatedWrapper>
