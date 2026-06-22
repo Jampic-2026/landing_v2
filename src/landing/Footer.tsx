@@ -16,9 +16,11 @@ export default function Footer({ language }: FooterProps) {
         className={`${containerShell} flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between`}
       >
         <div className="grid gap-1">
-          <strong className="text-lg font-black text-slate-950 dark:text-white">
-            Jampic
-          </strong>
+          <img
+            src="/logo.png"
+            alt="Jampic"
+            className="h-10 w-auto"
+          />
 
           <small className="text-sm text-slate-500 dark:text-slate-400">
             {footer.copyright}

@@ -17,22 +17,17 @@ export default function Navbar({ language, setLanguage, theme, setTheme }: Navba
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 shadow-lg shadow-slate-900/5 backdrop-blur-2xl dark:border-white/10 dark:bg-slate-950/80 dark:shadow-black/20">
       <div className="mx-auto flex min-h-[74px] w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-teal-500 to-sky-500 text-base font-black text-white shadow-lg shadow-teal-500/20">
-            H
-          </span>
-          <span className="grid">
-            <strong className="text-lg font-black text-slate-950 dark:text-white">Jampic</strong>
-            <small className="text-xs font-bold text-slate-500 dark:text-slate-400">
-              {language === 'es' ? 'Ecosistema HealthTech' : 'HealthTech ecosystem'}
-            </small>
-          </span>
+        <div className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Jampic"
+            className="h-14 w-auto"
+          />
         </div>
 
         <div
-          className={`absolute left-4 right-4 top-[calc(100%+0.75rem)] grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 dark:border-white/10 dark:bg-slate-950 lg:static lg:flex lg:items-center lg:gap-6 lg:border-0 lg:bg-transparent lg:shadow-none lg:dark:bg-transparent ${
-            menuOpen ? 'grid' : 'hidden lg:flex'
-          }`}
+          className={`absolute left-4 right-4 top-[calc(100%+0.75rem)] grid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/10 dark:border-white/10 dark:bg-slate-950 lg:static lg:flex lg:items-center lg:gap-6 lg:border-0 lg:bg-transparent lg:shadow-none lg:dark:bg-transparent ${menuOpen ? 'grid' : 'hidden lg:flex'
+            }`}
           aria-expanded={menuOpen}
         >
           {content.links.map((link) => (
@@ -53,11 +48,10 @@ export default function Navbar({ language, setLanguage, theme, setTheme }: Navba
               <button
                 key={lang}
                 type="button"
-                className={`rounded-full px-3 py-1.5 text-xs font-black transition-colors ${
-                  language === lang
+                className={`rounded-full px-3 py-1.5 text-xs font-black transition-colors ${language === lang
                     ? 'bg-white text-slate-950 shadow-sm dark:bg-white/15 dark:text-white'
                     : 'text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-white'
-                }`}
+                  }`}
                 onClick={() => setLanguage(lang)}
               >
                 {lang.toUpperCase()}
