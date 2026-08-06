@@ -37,6 +37,20 @@ El contenido de la landing está centralizado en `src/config/content.ts` y sopor
 - `es` (español)
 - `en` (inglés)
 
+## Enlaces del producto
+
+Los enlaces de acceso están centralizados en `src/config/links.ts`. Se pueden
+sobrescribir durante el despliegue con estas variables:
+
+```env
+VITE_WEB_APP_URL=https://app.jampic.com
+VITE_ANDROID_APK_URL=/downloads/jampic_V1.0.0.apk
+```
+
+Para usar la ruta predeterminada del APK, publica el artefacto como
+`public/downloads/jampic_V1.0.0.apk`. También se puede configurar una URL
+externa mediante `VITE_ANDROID_APK_URL`.
+
 ## Secciones principales
 
 - `Navbar`

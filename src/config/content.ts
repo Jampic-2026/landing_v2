@@ -11,13 +11,13 @@ export const landingContent = {
         { label: 'Beneficios', href: '#beneficios' },
         { label: 'Contacto', href: '#contacto' },
       ],
-      cta: 'Solicitar demo',
+      cta: 'Abrir Jampic',
     },
     hero: {
       title: 'Atención médica conectada, rápida y segura',
       subtitle: 'Jampic conecta pacientes, familiares, profesionales de salud e instituciones en un ecosistema médico inteligente.',
-      primaryCta: 'Solicitar demo',
-      secondaryCta: 'Ver cómo funciona',
+      primaryCta: 'Usar versión web',
+      secondaryCta: 'Descargar para Android',
       dashboardAlt: 'Panel médico en tiempo real de Jampic',
       mobileAlt: 'Aplicación móvil de Jampic',
       features: [
@@ -352,8 +352,8 @@ export const landingContent = {
     finalCta: {
       title: 'Construyamos una atención médica más conectada',
       subtitle: 'Jampic nace para acercar atención, tecnología y personas en los momentos donde la salud no puede esperar.',
-      primaryCta: 'Solicitar demo',
-      secondaryCta: 'Contactar al equipo',
+      primaryCta: 'Usar versión web',
+      secondaryCta: 'Descargar APK',
       care: 'Cuidado conectado',
     },
     footer: {
@@ -369,13 +369,13 @@ export const landingContent = {
         { label: 'Benefits', href: '#beneficios' },
         { label: 'Contact', href: '#contacto' },
       ],
-      cta: 'Request demo',
+      cta: 'Open Jampic',
     },
     hero: {
       title: 'Connected, fast and secure healthcare',
       subtitle: 'Jampic connects patients, families, healthcare professionals and institutions in an intelligent medical ecosystem.',
-      primaryCta: 'Request demo',
-      secondaryCta: 'See how it works',
+      primaryCta: 'Use web version',
+      secondaryCta: 'Download for Android',
       dashboardAlt: 'Jampic real-time medical dashboard',
       mobileAlt: 'Jampic mobile application',
       features: [
@@ -706,8 +706,8 @@ export const landingContent = {
     finalCta: {
       title: 'Let’s build more connected healthcare',
       subtitle: 'Jampic was born to bring care, technology and people closer in the moments when health cannot wait.',
-      primaryCta: 'Request demo',
-      secondaryCta: 'Contact the team',
+      primaryCta: 'Use web version',
+      secondaryCta: 'Download APK',
       care: 'Care connected',
     },
     footer: {

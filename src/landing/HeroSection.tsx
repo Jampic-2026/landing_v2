@@ -1,6 +1,7 @@
 import AnimatedWrapper from '../components/AnimatedWrapper';
 import { landingContent } from '../config/content';
 import type { Language } from '../config/content';
+import { productLinks } from '../config/links';
 import { BarChart3, LockKeyhole, ShieldCheck, UsersRound } from 'lucide-react';
 
 type HeroSectionProps = {
@@ -33,7 +34,9 @@ export default function HeroSection({ language }: HeroSectionProps) {
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#contacto"
+                href={productLinks.webApp}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex min-h-14 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-teal-500 px-7 text-base font-extrabold text-white shadow-xl shadow-blue-600/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 {content.primaryCta}
@@ -41,7 +44,8 @@ export default function HeroSection({ language }: HeroSectionProps) {
               </a>
 
               <a
-                href="#como-funciona"
+                href={productLinks.androidApk}
+                download
                 className="inline-flex min-h-14 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 px-7 text-base font-extrabold text-slate-950 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:bg-white dark:border-slate-700 dark:bg-slate-900/70 dark:text-white"
               >
                 {content.secondaryCta}

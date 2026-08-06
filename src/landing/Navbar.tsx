@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ThemeToggle from '../components/ThemeToggle';
 import { landingContent, type Language, type Theme } from '../config/content';
+import { productLinks } from '../config/links';
 import { primaryButton } from './ui';
 
 type NavbarProps = {
@@ -59,7 +60,12 @@ export default function Navbar({ language, setLanguage, theme, setTheme }: Navba
             ))}
           </div>
           <ThemeToggle theme={theme} setTheme={setTheme} />
-          <a className={`${primaryButton} hidden xl:inline-flex`} href="#contacto">
+          <a
+            className={`${primaryButton} hidden xl:inline-flex`}
+            href={productLinks.webApp}
+            target="_blank"
+            rel="noreferrer"
+          >
             {content.cta}
           </a>
           <button

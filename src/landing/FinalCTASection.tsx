@@ -2,6 +2,7 @@ import AnimatedWrapper from '../components/AnimatedWrapper';
 import SectionHeader from '../components/SectionHeader';
 import { landingContent } from '../config/content';
 import type { Language } from '../config/content';
+import { productLinks } from '../config/links';
 import { containerShell, primaryButton, secondaryButton } from './ui';
 
 export default function FinalCTASection({ language }: { language: Language }) {
@@ -15,10 +16,14 @@ export default function FinalCTASection({ language }: { language: Language }) {
             <div className="[&_h2]:!text-white [&_p]:!text-slate-300">
               <SectionHeader title={content.title} subtitle={content.subtitle} />
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a className={primaryButton} href="#contacto">
+                <a className={primaryButton} href={productLinks.webApp} target="_blank" rel="noreferrer">
                   {content.primaryCta}
                 </a>
-                <a className={`${secondaryButton} border-white/15 bg-white/10 text-white hover:bg-white/15`} href="#contacto">
+                <a
+                  className={`${secondaryButton} border-white/15 bg-white/10 text-white hover:bg-white/15`}
+                  href={productLinks.androidApk}
+                  download
+                >
                   {content.secondaryCta}
                 </a>
               </div>
